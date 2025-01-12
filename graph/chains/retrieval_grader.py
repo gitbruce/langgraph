@@ -1,7 +1,8 @@
+import os
+
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_openai import ChatOpenAI
-import os
 
 llm = ChatOpenAI(
     api_key=os.getenv("DASHSCOPE_API_KEY"),

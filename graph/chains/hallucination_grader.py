@@ -1,9 +1,10 @@
+import os
+
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_core.runnables import RunnableSequence
 from langchain_openai import ChatOpenAI
 
-import os
 llm = ChatOpenAI(
     api_key=os.getenv("DASHSCOPE_API_KEY"),
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
@@ -11,6 +12,7 @@ llm = ChatOpenAI(
     temperature=0,
     # other params...
 )
+
 
 class GradeHallucinations(BaseModel):
     """Binary score for hallucination present in generation answer."""
