@@ -1,0 +1,15 @@
+langchain
+langchain-openai
+langgraph
+langchain_chroma
+langchain_community
+langsmith
+tavily-python
+dashscope
+python-dotenv
+numexpr
+pypdf
+beautifulsoup4
+chromadb
+lark
+sentence-transformers
