@@ -1,36 +1,32 @@
-[tool.poetry]
-name = "langgaph"
+[project]
+name = "langgaph-course"
 version = "0.1.0"
 description = ""
-authors = ["mantianly@163.com"]
+authors = [
+    {name = "man",email = "mantianly@163.com"}
+]
 readme = "README.md"
-package-mode = false
-
-[tool.poetry.dependencies]
-python = ">=3.10,<3.13"
-beautifulsoup4 = "^4.12.3"
-langchain-community = "^0.0.38"
-tiktoken = "^0.6.0"
-langchainhub = "^0.1.15"
-langchain = "^0.1.20"
-langgraph = "^0.0.48"
-tavily-python = "^0.3.3"
-langchain-openai = "^0.1.6"
-python-dotenv = "^1.0.1"
-black = "^24.4.2"
-isort = "^5.13.2"
-pytest = "^8.2.0"
-langchain-chroma = "^0.1.0"
-dashscope = "^1.20.14"
-transformers = "^4.48.0"
-huggingface-hub = "^0.27.1"
-truststore = "^0.10.0"
-sentence-transformers = "^3.3.1"
-jupyter = "^1.1.1"
-ipywidgets = "^8.1.5"
-widgetsnbextension = "^4.0.13"
-ipykernel = "^6.29.5"
-faiss-cpu = "^1.9.0.post1"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "beautifulsoup4 (>=4.12.3,<5.0.0)",
+    "langchainhub (>=0.1.21,<0.2.0)",
+    "tavily-python (>=0.5.0,<0.6.0)",
+    "langchain-openai (>=0.3.0,<0.4.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
+    "black (>=24.10.0,<25.0.0)",
+    "isort (>=5.13.2,<6.0.0)",
+    "pytest (>=8.3.4,<9.0.0)",
+    "langchain-chroma (>=0.2.0,<0.3.0)",
+    "dashscope (>=1.20.14,<2.0.0)",
+    "langchain-ollama (>=0.2.2,<0.3.0)",
+    "langgraph (>=0.2.62,<0.3.0)",
+    "langchain (>=0.3.14,<0.4.0)",
+    "langchain-community (>=0.3.14,<0.4.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "sentence-transformers (>=3.3.1,<4.0.0)",
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipywidgets (>=8.1.5,<9.0.0)"
+]
 
 [[tool.poetry.source]]
 name = "mirrors"
@@ -38,5 +34,6 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 priority = "primary"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+

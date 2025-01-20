@@ -11,8 +11,8 @@ web_search_tool = TavilySearchResults(k=3)
 def web_search(state: GraphState) -> Dict[str, Any]:
     print("---WEB SEARCH---")
     question = state["question"]
-    documents = state["documents"]
-
+    documents = state.get("documents", None)
+    
     docs = web_search_tool.invoke({"query": question})
     web_results = "\n".join([d["content"] for d in docs])
     web_results = Document(page_content=web_results)
